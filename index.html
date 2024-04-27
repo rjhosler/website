@@ -6,87 +6,98 @@
     <title>Ryan Hosler's Homepage</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
         }
         .container {
-            max-width: 800px;
-            margin: auto;
-            overflow: hidden;
-            padding: 0 20px;
+            display: flex;
+            flex-direction: row;
+            height: 100vh;
         }
-        header {
-            background: #50b3a2;
+        .sidebar {
+            background: #004a7c; /* Dark Blue */
             color: #ffffff;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #e8491d 3px solid;
+            width: 250px;
+            padding: 20px;
+            min-height: 100vh;
         }
-        header a {
+        .content {
+            flex: 1;
+            padding: 20px;
+            background-color: #ffffff;
+        }
+        .sidebar h1, .sidebar a {
             color: #ffffff;
+        }
+        .sidebar a {
             text-decoration: none;
-            text-transform: uppercase;
+            display: block;
+            padding: 10px 0;
             font-size: 16px;
         }
-        header ul {
+        .sidebar a:hover, .sidebar .current a {
+            background-color: #0370a6; /* Lighter Blue */
+            padding-left: 5px;
+            font-weight: bold;
+        }
+        #publications h2 {
+            color: #004a7c; /* Echoing the sidebar color */
+        }
+        #publications ul {
+            list-style-type: none;
             padding: 0;
-            list-style: none;
-            overflow: hidden;
         }
-        header li {
-            float: left;
-            display: inline;
-            padding: 0 20px 0 20px;
+        #publications li {
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ccc;
         }
-        header #branding {
-            float: left;
+        #publications a {
+            color: #0370a6;
+            text-decoration: none;
         }
-        header #branding h1 {
-            margin: 0;
-        }
-        header nav {
-            float: right;
-            margin-top: 10px;
-        }
-        header .highlight, header .current a {
-            color: #e8491d;
-            font-weight: bold;
-        }
-        header a:hover {
-            color: #ffffff;
-            font-weight: bold;
+        #publications a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div id="branding">
-                <h1>Ryan Hosler's Homepage</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li class="current"><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
     <div class="container">
-        <section id="main">
+        <div class="sidebar">
+            <h1>Ryan Hosler's Homepage</h1>
+            <a href="index.html" class="current">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="content">
             <h1>Welcome to My Homepage</h1>
             <p>This is a simple HTML page as an example of a personal homepage.</p>
-        </section>
-    </div>
+            <section id="publications">
+                <h2>My Publications</h2>
+                <ul>
+                    <li>
+						R. Hosler, A. Sundar, X. Zou, F. Li, and T. Gao, “Unsupervised deep learning for an image based network intrusion detection system,” in GLOBECOM 2023 - 2023 IEEE Global Communications Conference, pp. 6825–6831, 2023.
+						<a href="https://ieeexplore.ieee.org/abstract/document/10437636" target="_blank">10.1109/GLOBECOM54140.2023.10437636</a><br><br>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Ryan Hosler. All rights reserved.</p>
+						R. Hosler, T. Phillips, X. Yu, A. Sundar, X. Zou, and F. Li, “Learning discriminative features for adversarial robustness,” in 2021 17th International Conference on Mobility, Sensing and Networking (MSN), pp. 303–310, 2021.
+						<a href="https://ieeexplore.ieee.org/abstract/document/9751568" target="_blank">10.1109/MSN53354.2021.00055</a><br><br>
+						
+						R. Hosler, X. Zou, and M. Bishop, "Electronic Voting Technology Inspired Interactive Teaching and Learning Pedagogy and Curriculum Development for Cybersecurity Education," in Information Security Education for Cyber Resilience (L. Drevin, N. Miloslavskaya, W. S. Leung, and S. von Solms, eds.), (Cham), pp. 27–43, Springer International Publishing, 2021., 						
+						<a href="https://doi.org/10.1007/978-3-030-80865-5_3" target="_blank">https://doi.org/10.1007/978-3-030-80865-5_3</a><br><br>
+						
+						A. Morehead, L. Ogden, G. Magee, R. Hosler, B. White, and G. Mohler, “Low cost gunshot detection using deep learning on the raspberry pi,” in 2019 IEEE International Conference on Big Data (Big Data), pp. 3038–3044, 2019.
+						<a href="https://ieeexplore.ieee.org/abstract/document/9006456" target="_blank">10.1109/BigData47090.2019.9006456</a><br><br>
+					</li>
+
+                    <!-- More list items for other papers -->
+                </ul>
+            </section>
         </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Ryan Hosler. All rights reserved.</p>
     </footer>
 </body>
 </html>
