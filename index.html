@@ -42,38 +42,66 @@
             padding-left: 5px;
             font-weight: bold;
         }
-        #publications h2 {
-            color: #004a7c; /* Echoing the sidebar color */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
         }
-        #publications ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        #publications li {
-            margin-bottom: 10px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #ccc;
-        }
-        #publications a {
-            color: #0370a6;
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
             text-decoration: none;
+            display: block;
         }
-        #publications a:hover {
-            text-decoration: underline;
+        .dropdown-content a:hover {background-color: #f1f1f1}
+		ul {
+            list-style-type: none; /* Removes bullet points */
+            padding: 0;
+            margin-top: 0; /* Removes any default top margin */
         }
+		li {
+			margin-bottom: 10px; /* Space between list items */
+			padding-left: 20px; /* Adds a left padding to create a tab effect */
+			line-height: 1.6; /* Ensures consistent line spacing */
+		}
     </style>
+    <script>
+        function toggleDropdown() {
+            var dropdownContent = document.getElementById("dropdown-contact");
+            if (dropdownContent.style.display === "none" || !dropdownContent.style.display) {
+                dropdownContent.style.display = "block";
+            } else {
+                dropdownContent.style.display = "none";
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="container">
         <div class="sidebar">
             <h1>Ryan Hosler's Homepage</h1>
             <a href="index.html" class="current">Home</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
+            <a href="#" onclick="toggleDropdown()">Contact</a>
+            <div id="dropdown-contact" class="dropdown-content">
+                <a href="mailto:hoslerjh@outlook.com">Email Me</a>
+                <a href="https://www.linkedin.com/in/ryan-hosler-9b7657159/">LinkedIn</a>
+            </div>
         </div>
         <div class="content">
-            <h1>Welcome to My Homepage</h1>
-            <p>This is a simple HTML page as an example of a personal homepage.</p>
+            <h1>Welcome to Dr. Ryan Hosler's Homepage</h1>
+            <p>Cybersecurity and Deep Learning Researcher.</p>
+			<section id="education">
+				<h2>Education</h2>
+				<ul>
+					<li>
+						PHD, May, 2024, Computer Science, 
+						<a href="https://www.iupui.edu/" target="_blank">Indiana University–Purdue University Indianapolis</a><br><br>
+					</li>
+				</ul>
+			</section>
             <section id="publications">
                 <h2>My Publications</h2>
                 <ul>
@@ -90,8 +118,6 @@
 						A. Morehead, L. Ogden, G. Magee, R. Hosler, B. White, and G. Mohler, “Low cost gunshot detection using deep learning on the raspberry pi,” in 2019 IEEE International Conference on Big Data (Big Data), pp. 3038–3044, 2019.
 						<a href="https://ieeexplore.ieee.org/abstract/document/9006456" target="_blank">10.1109/BigData47090.2019.9006456</a><br><br>
 					</li>
-
-                    <!-- More list items for other papers -->
                 </ul>
             </section>
         </div>
