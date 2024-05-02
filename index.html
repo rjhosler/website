@@ -23,6 +23,14 @@
             padding: 20px;
             min-height: 100vh;
         }
+		.sidebar img {
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            border-radius: 100%;
+            margin: 0 auto 20px; /* Centers the image and adds space below */
+        }
         .content {
             flex: 1;
             padding: 20px;
@@ -82,12 +90,11 @@
 <body>
     <div class="container">
         <div class="sidebar">
-            <h1>Ryan Hosler's Homepage</h1>
-            <a href="index.html" class="current">Home</a>
+            <img src="PFP.png" alt="Ryan Hosler">
             <a href="#" onclick="toggleDropdown()">Contact</a>
             <div id="dropdown-contact" class="dropdown-content">
                 <a href="mailto:hoslerjh@outlook.com">Email Me</a>
-                <a href="https://www.linkedin.com/in/ryan-hosler-9b7657159/">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/ryan-hosler-9b7657159/" target="_blank">LinkedIn</a>
             </div>
         </div>
         <div class="content">
@@ -98,6 +105,12 @@
 				<ul>
 					<li>
 						PHD, May, 2024, Computer Science, 
+						<a href="https://www.iupui.edu/" target="_blank">Indiana University–Purdue University Indianapolis</a><br><br>
+						
+						M.S., May, 2020, Computer Science, 
+						<a href="https://www.iupui.edu/" target="_blank">Indiana University–Purdue University Indianapolis</a><br><br>
+						
+						B.S., May, 2019, Computer Science, 
 						<a href="https://www.iupui.edu/" target="_blank">Indiana University–Purdue University Indianapolis</a><br><br>
 					</li>
 				</ul>
